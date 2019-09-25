@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <link   rel  ="stylesheet"       href ="{%static 'Bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+    <form action="{% url 'home' %}">
+        <div>
+            <h1>Entered Sentence : </h1>{{ txt }}
+            <h1>No of Words Present : </h1> {{ count }}
+            <h1>Word Count : </h1>
+            {% for word,count in worddict %}
+            {{ word }} : {{ count }}
+            <br/>
+            {% endfor %}
+        </div>
+        <div class=" d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Back</button>
+        </div>
+    </form>
+</body>
+</html>

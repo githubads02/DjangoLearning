@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Count</title>
+    <link   rel  ="stylesheet"       href ="{%static 'Bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+    <form action="{% url 'countwords' %}">
+        <fieldset>
+            <div class="form-group">
+                <div class=" d-flex justify-content-center">
+                    <label for="wordcount">Enter word here   : <br></label>
+                    <textarea id="wordcount" rows="4" name="txt"></textarea>
+                </div>
+            </div>
+            <div>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Generate Count</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
