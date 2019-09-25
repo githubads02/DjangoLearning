@@ -9,9 +9,9 @@
 <body>
     <form action="{% url 'home' %}">
         <div>
-            <h1>Entered Sentence : </h1>{{ txt }}
-            <h1>No of Words Present : </h1> {{ count }}
-            <h1>Word Count : </h1>
+            <h2>Entered Sentence : </h2>{{ txt }}
+            <h2>No of Words Present : </h2> {{ count }}
+            <h2>Word Count : </h2>
             {% for word,count in worddict %}
             {{ word }} : {{ count }}
             <br/>
